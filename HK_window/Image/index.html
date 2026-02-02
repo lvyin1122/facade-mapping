@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant Motion Graph</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        #canvas-container {
+            position: relative;
+        }
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 12px;
+            z-index: 10;
+        }
+        .controls h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+        .controls label {
+            display: block;
+            margin: 8px 0 4px 0;
+        }
+        .controls input[type="range"] {
+            width: 200px;
+        }
+        .controls button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff00ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .controls button:hover {
+            background: #ff66ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div class="controls">
+        <h3>Controls</h3>
+        <label>Blur Intensity: <span id="blur-value">5</span></label>
+        <input type="range" id="blur-slider" min="1" max="20" value="5">
+        
+        <label>Color Intensity: <span id="color-value">100</span></label>
+        <input type="range" id="color-slider" min="50" max="150" value="100">
+        
+        <label>Motion Speed: <span id="speed-value">1</span></label>
+        <input type="range" id="speed-slider" min="0" max="3" step="0.1" value="1">
+        
+        <label>Ray Count: <span id="rays-value">50</span></label>
+        <input type="range" id="rays-slider" min="20" max="100" value="50">
+        
+        <button onclick="resetAnimation()">Reset</button>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
+

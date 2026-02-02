@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Photography Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen">
+        <span class="fullscreen-icon">⛶</span>
+    </button>
+    
+    <div class="gallery-container">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Images will be dynamically loaded here -->
+        </div>
+    </div>
+    
+    <audio id="clickSound" preload="auto">
+        <source src="../sound/dense block.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Image Viewer Modal -->
+    <div class="image-viewer" id="imageViewer">
+        <button class="image-viewer-close" id="closeViewer">×</button>
+        <div class="image-viewer-content">
+            <img id="viewerImage" src="" alt="Enlarged image">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
